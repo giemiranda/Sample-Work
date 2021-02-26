@@ -1,0 +1,35 @@
+/*Start of Breadcrumbs*/
+.breadcrumb{
+    background-color: #e8e8e8;
+    padding: .5rem 1rem !important;
+}
+
+.breadcrumb .drop-container{
+    cursor: pointer;
+}
+
+.breadcrumb .active{
+    color: #028272;
+    
+}
+
+.breadcrumb .drop{
+    top: 30px !important;
+    left: auto !important;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    z-index: 1;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+}
+
+.breadcrumb .drop ul{
+    list-style: none;
+    padding: 0;
+}
+
+.drop-container .fa-chevron-down{
+    font-size: .7rem;
+}
+/**/

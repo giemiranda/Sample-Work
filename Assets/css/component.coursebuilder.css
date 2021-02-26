@@ -1,0 +1,23 @@
+.uploadedImageContainer{
+    background-color: #efefef;
+    border-radius: 5px;
+    height: 230px;
+    width: 100%;
+}
+
+.uploadedImageContainer .fa-image{
+    font-size: 3rem;
+}
+
+.successContent{
+    text-align: center;
+}
+
+.successContent .fa-check-circle{
+    font-size: 5rem;
+    color:#007133;
+}
+
+.successContent h3{
+    color:#007133;
+}

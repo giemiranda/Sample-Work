@@ -1,0 +1,34 @@
+/*Start of TreeView*/
+.tvIcon{
+    height: 100%;
+    width:20px;
+    padding:5px;
+}
+
+.tvTitle{
+    font-size: .9rem;
+    font-weight: 700;
+    display: block;
+    margin-top: 6px;
+    color:#484848;
+}
+
+.TreeView .card-body{
+    padding: 0px;
+}
+
+.tvSub1{
+    color:#7b7b7b;
+    padding-left: 1.5rem;
+}
+
+.TreeView .card-header{
+    background-color: transparent;
+}
+
+.TreeView .card-header{
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
+    z-index: 1;
+}
+/*End of TreeView*/
+

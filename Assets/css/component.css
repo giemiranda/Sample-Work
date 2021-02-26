@@ -1,0 +1,144 @@
+﻿body{
+    font-family: 'Roboto', sans-serif;
+    color:#545454;
+    padding-top:110px;
+}
+
+a{
+    color: #4569C5;
+}
+
+.DeleteColor{
+    color: rgb(157, 0, 0);
+}
+
+a:hover{
+    color: #01178F;
+}
+
+/*Custom Container Styles*/
+.cstm_ctnr{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius:  3px !important;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    margin-top: 7%  !important;
+}
+
+.cstm_ctnr_fullWidth{
+    background-color: #ffffff;
+    margin-top: 65px  !important;
+    padding: 20px 45px;
+}
+
+
+
+
+.ctnr_titleBox{
+    background-color: #012050 !important;
+    border-radius: 3px 3px 0px 0px;
+}
+.ctnr_titleBox label{
+    color:#ffffff;
+    font-size: .9rem;
+    font-weight: 700;
+}
+/*End of Custom Container Styles*/
+
+.drop-container:hover .drop {
+display: block;
+}
+.drop-container .drop {
+display: none;
+position: absolute;
+top: 20px;
+left: 8px;
+}
+.drop-container .drop a {
+display: block;
+padding: 8px 16px;
+}
+
+.clear{
+    display: block;
+    overflow: hidden;
+}
+
+.pullLeft{
+    float:left;
+}
+
+.pullRight{
+    float:right;
+}
+
+br {
+    display: block;
+    margin: 10px 0;
+ }
+
+ .cstm_ctnr_bottom{
+    height: 50px;
+    width: 100%;
+    border-top:1px solid #cccccc;
+    position: absolute;
+    bottom: 0;
+ }
+
+
+ /*Responsive*/
+ @media only screen and (max-width: 768px) {
+    body {
+      padding-top: 72px;
+    }
+    .navUsername{
+        position: relative;
+        left:42%;
+    }
+    .navAdmin{
+        position: relative;
+        left:20%;
+    }
+
+    .navAdmin .dropdown-menu{
+        left:-100px;
+    }
+
+    .navbarMenu{
+        top:69px !important;
+    }
+
+
+    .cstm_ctnr{
+        margin-top:22% !important;
+    }
+
+    .roundedWrap{
+        padding: 5px !Important;
+        font-size: .6rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .navUsername{
+        position: relative;
+        left:30%;
+    }
+    .navAdmin{
+        position: relative;
+        left:13%;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .navUsername{
+        position: relative;
+        left:27%;
+    }
+    .navAdmin{
+        position: relative;
+        left:11%;
+    }
+  }

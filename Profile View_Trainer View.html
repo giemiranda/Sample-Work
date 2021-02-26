@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <title>OM-LMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Assets/css/site.css">
+	<link rel="stylesheet" href="Assets/css/site.font.css">
+	<link rel="stylesheet" href="Assets/css/site.navbar.css">
+  <link rel="stylesheet" href="Assets/css/component.css">
+  <link rel="stylesheet" href="Assets/css/component.accordion.css">
+  <link rel="stylesheet" href="Assets/css/component.button.css">
+  <link rel="stylesheet" href="Assets/css/component.breadcrumb.css">
+  <link rel="stylesheet" href="Assets/css/component.form_fields.css">
+  <link rel="stylesheet" href="Assets/css/component.tables.css">
+  <link rel="stylesheet" href="Assets/css/component.tiles.css">
+  <link rel="stylesheet" href="Assets/css/component.treeview.css">
+  <link rel="stylesheet" href="Assets/css/component.rounded_wrap.css">
+  <link rel="stylesheet" href="Assets/lib/fonts/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/css/components.profview_trainerview.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    
+  </head>
+
+<body class="bg-light">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Assets/js/floating_form_label.js"></script>
+<script type="text/javascript" src="Assets/js/multiselect2.js"></script>
+<script type="text/javascript" src="Assets/js/multiselectscript.js"></script>
+<script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+
+<header>
+  <!--Top NavBar-->
+   <nav class="navbar navbarBrand navbar-expand-lg navbar-light bg-light fixed-top" style="z-index: 1100;">
+       <a href="#"><img src="Assets/img/logo-omc-colored.png" style="width:55px;"></a>
+
+       <div class="collapse navbar-collapse justify-content-md-center mr-auto ml-auto" id="navbarSupportedContent">
+           <form class="form-inline my-2 my-lg-0" style="margin-left:100px">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search" style="width: 300px;border-radius:50px !important">
+           </form>
+       </div>
+
+       <div class="navUsername">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="avatar w-32"><img src="Assets/img/profile/x0.png" alt="..."><i class="off b - white bottom"></i></span>
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><span class="_500" id="userName">John Doe</span></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a href="/Account/UserProfile" class="dropdown-item"><span>Profile</span></a>
+               <a href="/Home/Privacy" class="dropdown-item"><span>DPA Policy</span></a>
+               <a href="/Home/Roles" class="dropdown-item"><span>Switch Role</span></a>
+               <a href="/Account/Logout" class="dropdown-item"><span>Sign out</span></a>
+           </div>
+       </div>
+       <div class="navAdmin">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><i class="material-icons">&#xe5d4;</i></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a class="dropdown-item" href>General Setup</a>
+               <a class="dropdown-item" href>Administration</a>
+               <a class="dropdown-item" href>Platform Tools</a>
+               <a class="dropdown-item" ui-sref="app.page.setting"><span>Settings</span> <span class="label primary m-l-xs">3/9</span></a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href>Update Version</a>
+           </div>
+       </div>
+
+
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+   </nav>
+
+   <nav class="navbar navbarMenu navbar-expand-md fixed-top">
+       <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="#">Menu 1 <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 2</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 3</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 4</a>
+               </li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdown01">
+                       <a class="dropdown-item" href="#">Action</a>
+                       <a class="dropdown-item" href="#">Another action</a>
+                       <a class="dropdown-item" href="#">Something else here</a>
+                   </div>
+               </li>
+           </ul>
+           <form class="form-inline my-2 my-lg-0">
+               <label>API Version</label>
+           </form>
+       </div>
+   </nav>
+   <!--End of Top NavBar-->
+
+</header>
+
+    <!--Page Name Bar-->
+    <div class="page_name box-shadow py-2 px-3">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                <div class="page-title">
+                  <span class="roundedIconMd pullLeft mr-3">Icon</span>
+                  <h4 class="mb-0">Trainer View of Learner Profile</h4>
+                  <small class="text-muted">Build skills with courses, certificates, and degrees online from world-class universities and companies.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Name Bar-->
+
+    <!--Main Container-->
+    <div class="container cstm_ctnr_profile_view">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="boxed_ctnr p-3">
+              <div class="row">
+                <div class="col-lg-2">
+                  <img src="assets/img/a6.jpg" width="100px" class="rounded-circle">
+
+                  <div class="mt-2" style="text-align: center;">
+                    <a href="#" class="fa fa-facebook mr-1"></a>
+                    <a href="#" class="fa fa-twitter mr-1"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </div>
+                
+                </div>
+
+                <div class="col-lg-10 learnerInformation">
+                  <p class="learnerName">
+                    <span class="sectTitle_fnt"><label>Jose Romeo Dimaranan</label></span>
+                  </p>
+                  <p class="learnerLocation">
+                    <label>Manila, Philippines</label>
+                  </p>
+                  <p class="learnerOccupation">
+                    <label>College Student</label>
+                  </p>
+                  <p class="learnerContactDets">
+                    <label><i class="fa fa-envelope"></i>jr.dimaranan@gmail.com</label>
+                    <label><i class="fa fa-phone"></i>+639171234567</label>
+                  </p>
+                  <p class="learnerAboutMe mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper convallis dui a pretium. Suspendisse leo lacus, semper eu volutpat quis, venenatis id lacus. Aliquam at massa maximus, ultricies purus quis, varius nisi. Proin iaculis arcu ut purus viverra, nec dapibus augue elementum. Duis at condimentum tortor. Pellentesque nulla lorem, faucibus id mi ac, convallis dapibus massa.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="boxed_ctnr p-3 mt-3">
+              <span class="sectTitle_2nd_fnt">Currently enrolled in courses</span>
+              <div class="row py-3 px-4 resultRow">
+                <div class="col-lg-2 px-0">
+                  <div class="resultImg">
+                    <img src="https://via.placeholder.com/125x120"/>
+                  </div>
+                </div>
+    
+                <div class="col-10">
+                  <div class="courseDets">
+                    <label class="courseTitle pl-0">This is a placeholder for the course title</label>
+                    <div class="pull-right"><span class="roundedWrap">Group of Course</span></div>
+                    <p class="courseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium. Nam erat dui, venenatis non fermentum ut, condimentum pharetra arcu. Donec cursus, magna ut suscipit feugiat, nulla mauris vulputate augue, sed dictum erat diam nec metus. Ut est mauris, volutpat nec convallis id, volutpat at ligula.</p>
+                    <div class="pullLeft mt-1 mb-3">
+                      <span class="addtlDetails mr-1"><i>•2 Sessions</i></span>
+                      <span class="addtlDetails mr-1"><i>•135 Minutes</i></span>
+                      <span class="addtlDetails"><i>•Beginner</i></span>
+                    </div>
+    
+                    <div class=" pull-right">
+                      <span><small>Badge to earn:</small></span>
+                      <img src="../html/Assets/img/1st badge.png" width="18px"/>
+                      <img src="../html/Assets/img/2nd b.png" width="18px"/>
+                  </div>
+                  </div>
+                </div>
+                <hr/>
+              </div>
+
+              <div class="row py-3 px-4 resultRow">
+                <div class="col-lg-2 px-0">
+                  <div class="resultImg">
+                    <img src="https://via.placeholder.com/125x120"/>
+                  </div>
+                </div>
+    
+                <div class="col-10">
+                  <div class="courseDets">
+                    <label class="courseTitle pl-0">This is a placeholder for the course title</label>
+                    <div class="pull-right"><span class="roundedWrap">Group of Course</span></div>
+                    <p class="courseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium. Nam erat dui, venenatis non fermentum ut, condimentum pharetra arcu. Donec cursus, magna ut suscipit feugiat, nulla mauris vulputate augue, sed dictum erat diam nec metus. Ut est mauris, volutpat nec convallis id, volutpat at ligula.</p>
+                    <div class="pullLeft mt-1 mb-3">
+                      <span class="addtlDetails mr-1"><i>•2 Sessions</i></span>
+                      <span class="addtlDetails mr-1"><i>•135 Minutes</i></span>
+                      <span class="addtlDetails"><i>•Beginner</i></span>
+                    </div>
+    
+                    <div class=" pull-right">
+                      <span><small>Badge to earn:</small></span>
+                      <img src="../html/Assets/img/1st badge.png" width="18px"/>
+                      <img src="../html/Assets/img/2nd b.png" width="18px"/>
+                  </div>
+                  </div>
+                </div>
+                <hr/>
+              </div>
+
+            </div>
+
+
+            <div class="boxed_ctnr p-3 mt-3">
+              <span class="sectTitle_2nd_fnt">Finished Courses</span>
+              <div class="row py-3 px-4 resultRow">
+                <div class="col-lg-2 px-0">
+                  <div class="resultImg">
+                    <img src="https://via.placeholder.com/125x120"/>
+                  </div>
+                </div>
+    
+                <div class="col-10">
+                  <div class="courseDets">
+                    <label class="courseTitle pl-0">This is a placeholder for the course title</label>
+                    <div class="pull-right"><span class="roundedWrap">Group of Course</span></div>
+                    <p class="courseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium. Nam erat dui, venenatis non fermentum ut, condimentum pharetra arcu. Donec cursus, magna ut suscipit feugiat, nulla mauris vulputate augue, sed dictum erat diam nec metus. Ut est mauris, volutpat nec convallis id, volutpat at ligula.</p>
+                    <div class="pullLeft mt-1 mb-3">
+                      <span class="addtlDetails mr-1"><i>•2 Sessions</i></span>
+                      <span class="addtlDetails mr-1"><i>•135 Minutes</i></span>
+                      <span class="addtlDetails"><i>•Beginner</i></span>
+                    </div>
+    
+                    <div class=" pull-right">
+                      <span><small>Earned Badges:</small></span>
+                      <img src="../html/Assets/img/1st badge.png" width="18px"/>
+                      <img src="../html/Assets/img/2nd b.png" width="18px"/>
+                  </div>
+                  </div>
+                </div>
+                <hr/>
+              </div>
+
+              <div class="row py-3 px-4 resultRow">
+                <div class="col-lg-2 px-0">
+                  <div class="resultImg">
+                    <img src="https://via.placeholder.com/125x120"/>
+                  </div>
+                </div>
+    
+                <div class="col-10">
+                  <div class="courseDets">
+                    <label class="courseTitle pl-0">This is a placeholder for the course title</label>
+                    <div class="pull-right"><span class="roundedWrap">Group of Course</span></div>
+                    <p class="courseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium. Nam erat dui, venenatis non fermentum ut, condimentum pharetra arcu. Donec cursus, magna ut suscipit feugiat, nulla mauris vulputate augue, sed dictum erat diam nec metus. Ut est mauris, volutpat nec convallis id, volutpat at ligula.</p>
+                    <div class="pullLeft mt-1 mb-3">
+                      <span class="addtlDetails mr-1"><i>•2 Sessions</i></span>
+                      <span class="addtlDetails mr-1"><i>•135 Minutes</i></span>
+                      <span class="addtlDetails"><i>•Beginner</i></span>
+                    </div>
+    
+                    <div class=" pull-right">
+                      <span><small>Earned Badges:</small></span>
+                      <img src="../html/Assets/img/1st badge.png" width="18px"/>
+                      <img src="../html/Assets/img/2nd b.png" width="18px"/>
+                  </div>
+                  </div>
+                </div>
+                <hr/>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="boxed_ctnr p-3 profileStats">
+              <span class="sectTitle_2nd_fnt">Profile Statistics</span>
+              <div style="text-align: center;">
+                <p class="pr-5 pt-3"><i class="fa fa-check-circle mt-4"></i></p>
+                <p><span class="sectTitle_2nd_fnt">Certified Learner</span></p>
+              </div>
+
+              <div class="statsNumbers mt-3">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="badgesCount">
+                      <span class="badgeNumber">36</span><br/>
+                      <span class="sectTitle_2nd_fnt">Badges</span>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="pointsCount">
+                      <span class="pointsNumber">836</span><br/>
+                      <span class="sectTitle_2nd_fnt">Points</span>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="pointsCount">
+                      <span class="pointsNumber">47</span><br/>
+                      <span class="sectTitle_2nd_fnt">Courses</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="boxed_ctnr User Badges mt-3">
+              <div class="p-3">
+              <span class="sectTitle_2nd_fnt">User Badges</span>
+              <span class="pull-right">(12 Badges)</span>
+
+              <div class="row mt-3">
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesIcon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="sectionFooter p-2 mt-3">
+                <button type="button" class="btn btn-sm btn_tertiary_otl pull-right">View All</button>
+              </div>
+            </div>
+
+
+            <div class="boxed_ctnr User Badges mt-3">
+              <div class="p-3">
+              <span class="sectTitle_2nd_fnt">Certifications</span>
+              <span class="pull-right">(12 Badges)</span>
+
+              <div class="row mt-3">
+                <div class="col-lg-3">
+                  <div class="userBadgesCertIcon">
+                    <i class="fa fa-graduation-cap"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesCertIcon">
+                    <i class="fa fa-graduation-cap"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesCertIcon">
+                    <i class="fa fa-graduation-cap"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="userBadgesCertIcon">
+                    <i class="fa fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+              <div class="sectionFooter p-2 mt-3">
+                <button type="button" class="btn btn-sm btn_tertiary_otl pull-right">View All</button>
+              </div>
+            </div>
+
+
+            <div class="boxed_ctnr profileStats mt-3">
+              <div class="p-3">
+              <span class="sectTitle_2nd_fnt">User Activity</span>
+              
+              <div class="row mt-2">
+                <div class="col-lg-2">
+                  <div class="activityIcon">
+                    <i class="fa fa-signal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-10 pl-4">
+                  <div class="activityDets pb-2">
+                    <p class="sectTitle_2nd_fnt">User Activity 1</p>
+                    <p><small>Placeholder 1</small></p>
+                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium.</small></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-lg-2">
+                  <div class="activityIcon">
+                    <i class="fa fa-signal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-10 pl-4">
+                  <div class="activityDets pb-2">
+                    <p class="sectTitle_2nd_fnt">User Activity 2</p>
+                    <p><small>Placeholder 1</small></p>
+                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper lectus nec volutpat pretium.</small></p>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="sectionFooter p-2 mt-3">
+                <button type="button" class="btn btn-sm btn_tertiary_otl pull-right">View All</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <title>OM-LMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Assets/css/site.css">
+	<link rel="stylesheet" href="Assets/css/site.font.css">
+	<link rel="stylesheet" href="Assets/css/site.navbar.css">
+  <link rel="stylesheet" href="Assets/css/component.css">
+  <link rel="stylesheet" href="Assets/css/component.accordion.css">
+  <link rel="stylesheet" href="Assets/css/component.button.css">
+  <link rel="stylesheet" href="Assets/css/component.breadcrumb.css">
+  <link rel="stylesheet" href="Assets/css/component.form_fields.css">
+  <link rel="stylesheet" href="Assets/css/component.tables.css">
+  <link rel="stylesheet" href="Assets/css/component.tiles.css">
+  <link rel="stylesheet" href="Assets/css/component.treeview.css">
+  <link rel="stylesheet" href="Assets/css/component.rounded_wrap.css">
+  <link rel="stylesheet" href="Assets/lib/fonts/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/css/component.steps.css">
+  <link rel="stylesheet" href="Assets/css/component.coursebuilder.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    
+  </head>
+
+<body class="bg-light px-3">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Assets/js/floating_form_label.js"></script>
+<script type="text/javascript" src="Assets/js/multiselect2.js"></script>
+<script type="text/javascript" src="Assets/js/multiselectscript.js"></script>
+<script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+
+<header>
+  <!--Top NavBar-->
+   <nav class="navbar navbarBrand navbar-expand-lg navbar-light bg-light fixed-top" style="z-index: 1100;">
+       <a href="#"><img src="Assets/img/logo-omc-colored.png" style="width:55px;"></a>
+
+       <div class="collapse navbar-collapse justify-content-md-center mr-auto ml-auto" id="navbarSupportedContent">
+           <form class="form-inline my-2 my-lg-0" style="margin-left:100px">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search" style="width: 300px;border-radius:50px !important">
+           </form>
+       </div>
+
+       <div class="navUsername">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="avatar w-32"><img src="Assets/img/profile/x0.png" alt="..."><i class="off b - white bottom"></i></span>
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><span class="_500" id="userName">John Doe</span></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a href="/Account/UserProfile" class="dropdown-item"><span>Profile</span></a>
+               <a href="/Home/Privacy" class="dropdown-item"><span>DPA Policy</span></a>
+               <a href="/Home/Roles" class="dropdown-item"><span>Switch Role</span></a>
+               <a href="/Account/Logout" class="dropdown-item"><span>Sign out</span></a>
+           </div>
+       </div>
+       <div class="navAdmin">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><i class="material-icons">&#xe5d4;</i></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a class="dropdown-item" href>General Setup</a>
+               <a class="dropdown-item" href>Administration</a>
+               <a class="dropdown-item" href>Platform Tools</a>
+               <a class="dropdown-item" ui-sref="app.page.setting"><span>Settings</span> <span class="label primary m-l-xs">3/9</span></a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href>Update Version</a>
+           </div>
+       </div>
+
+
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+   </nav>
+
+   <nav class="navbar navbarMenu navbar-expand-md fixed-top ">
+       <div class="navbar-collapse offcanvas-collapse collapse" id="navbarsExampleDefault">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="#">Menu 1 <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 2</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 3</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 4</a>
+               </li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdown01">
+                       <a class="dropdown-item" href="#">Action</a>
+                       <a class="dropdown-item" href="#">Another action</a>
+                       <a class="dropdown-item" href="#">Something else here</a>
+                   </div>
+               </li>
+           </ul>
+           <form class="form-inline my-2 my-lg-0">
+               <label>API Version</label>
+           </form>
+       </div>
+   </nav>
+   <!--End of Top NavBar-->
+
+</header>
+
+    <!--Page Name Bar-->
+    <div class="page_name box-shadow py-2 px-3">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                <div class="page-title">
+                  <span class="roundedIconMd pullLeft mr-3">Icon</span>
+                  <h4 class="mb-0">Course Builder</h4>
+                  <small class="text-muted">Your first step before on creating your own training.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Name Bar-->
+
+    <!--Main Container-->
+    <div class="container cstm_ctnr my-3">
+        <!--Breadcrumb section-->
+
+        <div class="row">
+            <div class="col-lg-12 px-0">
+                <div class="ctnr_titleBox bg-secondary pl-3 py-2">
+                    <label class="mb-0">Course Builder</label>
+                </div>
+                
+                <div>
+                  <div class="steps-form mt-4">
+                    <div class="steps-row setup-panel">
+                      <div class="steps-step">
+                        <a href="#step-9" type="button" class="btn btn-indigo btn-circle stepActive"><span class="roundedIconSm"></span></a>
+                        <span class="sectTitle_2nd_fnt"><p>General<br/>Information</p></span>
+                      </div>
+                      <div class="steps-step">
+                        <a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled"><span class="roundedIconSmNotActive"></span></a>
+                        <span class="sectTitle_2nd_fnt"><p>View</p></span>
+                      </div>
+                      <div class="steps-step">
+                        <a href="#step-11" type="button" class="btn btn-default btn-circle" disabled="disabled"><span class="roundedIconSmNotActive"></span></a>
+                        <span class="sectTitle_2nd_fnt"><p>Course Content</p></span>
+                      </div>
+                      <div class="steps-step">
+                        <div class="lastItem">
+                        <a href="#step-12" type="button" class="btn btn-default btn-circle" disabled="disabled"><span class="roundedIconSmNotActive"></span></a>
+                        <span class="sectTitle_2nd_fnt"><p>Successfully<br/>Created</p></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form role="form" action="" method="post">
+
+                    <!-- First Step -->
+                    <div class="row setup-content" id="step-9">
+                      <div class="col-lg-12 cstm_ctnr_Content py-2">  
+                        <div class="row pb-5 px-4">
+                          <div class="col-lg-12 pt3">
+                            <form>
+                              <div class="form-row">
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Course Title</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Course Subtitle</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                              </div>
+      
+                              <div class="form-row pt-2">
+                                <div class="col-lg-12">
+                                  <label for="exampleFormControlTextarea1" class="omInputLbl">Course Description</label>
+                                  <textarea class="form-control omInputRadius" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                              </div>
+      
+                              <div class="form-row pt-2 pb-3">
+                                <div class="col-lg-4">
+                                  <label for="fieldDropdown" class="omInputLbl">Language</label>
+                                  <select class="form-control omInputRadius">
+                                    <option>Language 1</option>
+                                    <option>Language 2</option>
+                                    <option>Language 3</option>
+                                    <option>Language 4</option>
+                                    <option>Language 5</option>
+                                    <option>Language 6</option>
+                                    <option>Language 7</option>
+                                    <option>Language 8</option>
+                                    <option>Language 9</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-4">
+                                  <label for="fieldDropdown" class="omInputLbl">Course Category</label>
+                                  <select class="form-control omInputRadius">
+                                    <option>Course Category 1</option>
+                                    <option>Course Category 2</option>
+                                    <option>Course Category 3</option>
+                                    <option>Course Category 4</option>
+                                    <option>Course Category 5</option>
+                                    <option>Course Category 6</option>
+                                    <option>Course Category 7</option>
+                                    <option>Course Category 8</option>
+                                    <option>Course Category 9</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-4">
+                                  <label for="fieldDropdown" class="omInputLbl">Course Subcategory</label>
+                                  <select class="form-control omInputRadius">
+                                    <option>Course Subcategory 1</option>
+                                    <option>Course Subcategory 2</option>
+                                    <option>Course Subcategory 3</option>
+                                    <option>Course Subcategory 4</option>
+                                    <option>Course Subcategory 5</option>
+                                    <option>Course Subcategory 6</option>
+                                    <option>Course Subcategory 7</option>
+                                    <option>Course Subcategory 8</option>
+                                    <option>Course Subcategory 9</option>
+                                  </select>
+                                </div>
+                              </div>
+      
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Second Step -->
+                    <div class="row setup-content" id="step-10">
+                      <div class="col-lg-12 cstm_ctnr_Content py-2">  
+                        <div class="row pb-5 px-4">
+                          <div class="col-lg-12 pt3">
+                            <span class="sectTitle_2nd_fnt">View</span>
+
+                            <div class="row mt-2">
+                              <div class="col-lg-5">
+                                <div class="uploadedImageContainer">
+                                  
+                                </div>
+                              </div>
+
+                              <div class="col-lg-7">
+                                <span class="sectTitle_2nd_fnt">Cover Image</span>
+                                <p><small>Upload your course image here. It must meet our course image quality standards to be accepted. Important guidelines: 750x422 pixels; .jpg, .jpeg,. gif, or .png. no text on the image.</small></p>
+                                <div>
+                                  <input type="file" id="actual-btn" hidden/>
+                                  <label class="btn btn_tertiary" for="actual-btn">Choose File</label>
+                                  <span id="file-chosen">No file chosen</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row mt-4 mb-2">
+                              <div class="col-lg-5">
+                                <div class="uploadedImageContainer">
+                                  
+                                </div>
+                              </div>
+
+                              <div class="col-lg-7">
+                                <span class="sectTitle_2nd_fnt">Promotional Video</span>
+                                <p><small>Students who watch a well-made promo video are 5X more likely to enroll in your course. We've seen that statistic go up to 10X for exceptionally awesome videos. Learn how to make yours awesome!</small></p>
+                                <div>
+                                  <input type="file" id="actual-btn" hidden/>
+                                  <label class="btn btn_tertiary" for="actual-btn">Choose File</label>
+                                  <span id="file-chosen">No file chosen</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Third Step -->
+                    <div class="row setup-content" id="step-11">
+                      <div class="col-lg-12 cstm_ctnr_Content py-2">  
+                        <div class="row pb-5 px-4">
+                          <div class="col-lg-12 pt3">
+                            <!--Breadcrumb-->
+                            <div class="col-lg-12 cstm_ctnr_Content" style="padding-left: 0px; padding-right: 0px;">
+                              <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="#">Syllabus 1</a></li>
+                                  <li class="breadcrumb-item drop-container" aria-current="page"><a href="#">Module 1 <i class="fa fa-chevron-down"></i> </a>
+                                    <div class="drop">
+                                      <ul class="list pl1">
+                                        <li><a href="#">Course 1</a></li>
+                                        <li><a href="#">Course 2</a></li>
+                                      </ul>
+                                    </div>
+                                    <li class="breadcrumb-item drop-container" aria-current="page"><a href="#">Module 2 <i class="fa fa-chevron-down"></i> </a>
+                                    <div class="drop">
+                                      <ul class="list pl2">
+                                        <li><a href="#">Course 1</a></li>
+                                        <li><a href="#">Course 2</a></li>
+                                      </ul>
+                                    </div>
+                                    <li class="breadcrumb-item drop-container" aria-current="page"><a href="#">Module 3 <i class="fa fa-chevron-down"></i> </a>
+                                    <div class="drop">
+                                      <ul class="list pl3">
+                                        <li><a href="#">Course 1</a></li>
+                                        <li><a href="#">Course 2</a></li>
+                                      </ul>
+                                    </div>
+                                  <li class="breadcrumb-item active drop-container" aria-current="page"><span href="#">Module 4 <i class="fa fa-chevron-down"></i> </span>
+                                    <div class="drop">
+                                      <ul class="list pl0">
+                                        <li><a href="#">Course 1</a></li>
+                                        <li><a href="#">Course 2</a></li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </nav>
+                            </div>
+                            <!--End of Breadcrumb-->
+
+                            <!---->
+                            <form class="mb-4">
+                              <span class="sectTitle_2nd_fnt">Course</span>
+                              <div class="form-row">
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Course Content Title</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Course Content Subtitle</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                              </div>
+        
+                              <div class="form-row pt-2">
+                                <div class="col-lg-12">
+                                  <label for="exampleFormControlTextarea1" class="omInputLbl">Course Overview</label>
+                                  <textarea class="form-control omInputRadius" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                              </div>
+        
+                              <div class="form-row pt-2">
+                                <div class="col-lg-12">
+                                  <label for="exampleFormControlTextarea1" class="omInputLbl">Objectives</label>
+                                  <textarea class="form-control omInputRadius" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                              </div>
+        
+                              <div class="form-row pt-2">
+                                <div class="col-lg-3">
+                                  <label for="fieldSample" class="omInputLbl">Status</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-3">
+                                  <label for="fieldSample" class="omInputLbl">Order</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-3">
+                                  <label for="fieldSample" class="omInputLbl">Duration</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-3">
+                                  <label for="fieldSample" class="omInputLbl">Level</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                              </div>
+        
+                              <div class="form-row pt-2">
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Grammar</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="fieldSample" class="omInputLbl">Vocabulary</label>
+                                  <input type="text" class="form-control omInputRadius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Field Placeholder">
+                                </div>
+                              </div>
+                            </form>
+                            <!---->
+                            <span class="sectTitle_2nd_fnt">Materials</span>
+                            <hr>
+                            <!---->
+                            <div class="row mb-3 mt-1">
+                              <div class="col-lg-12">
+                                <div class="row mt-2 mb-3">
+                                  <div class="col-lg-6">
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="uploadedFile">
+                                          <div class="pullLeft leftPart">
+                                            <span class="glyphicon glyphicon-file"></span>
+                                          </div>
+                                          <div class="pullRight rightPart pt-1">
+                                            <p class="filename mb-0">Filename.extension</p>
+                                            <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                            <a href="#" class="txtUnderline">Delete</a>
+                                          </div>
+                                        </div>
+                                      </div>
+          
+                                      <div class="col-lg-6">
+                                        <div class="uploadedFile">
+                                          <div class="pullLeft leftPart">
+                                            <span class="glyphicon glyphicon-file"></span>
+                                          </div>
+                                          <div class="pullRight rightPart pt-1">
+                                            <p class="filename mb-0">SuperFinalDocument.extension</p>
+                                            <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                            <a href="#" class="txtUnderline">Delete</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+        
+                                  <div class="col-lg-6 uploadBox">
+                                    
+                                    <form>
+                                      <input type="file" multiple>
+                                      <p class="pt-4">Drag your files here or click the upload button below.<br/><button class="btn btn_tertiary">Upload</button></p>
+                                    </form>
+                                    <button type="button" class="btn btn-sm btn_secondary_otl pullRight mt-3">Save Course</button>
+                                    <script>
+                                      $(document).ready(function(){
+                                        $('form input').change(function () {
+                                          $('form p').text(this.files.length + " file(s) selected");
+                                        });
+                                      });
+                                    </script>
+                                  </div>
+                                </div>
+        
+                              </div>
+                            </div>
+                            <!---->
+                            <hr>
+                            <!---->
+                            <div class="row mb-2">
+                              <div class="col-lg-12">
+                                <table class="omTableClr table b-t">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Lecture Title</th>
+                                      <th>Volume</th>
+                                      <th>Duration</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Lecture Title Value</td>
+                                      <td>Volume Value</td>
+                                      <td>Duration Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Lecture Title Value</td>
+                                      <td>Volume Value</td>
+                                      <td>Duration Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Lecture Title Value</td>
+                                      <td>Volume Value</td>
+                                      <td>Duration Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <button type="button" class="btn btn-sm btn_secondary pullRight">Add New</button>
+                              </div>
+                            </div>
+                            <!---->
+                            <hr>
+                            <span class="sectTitle_2nd_fnt">Courses</span>
+                            <hr>
+                            <!---->
+                            <div class="row mt-1">
+                              <div class="col-lg-12 px-3">
+                                <table class="omTableClr table b-t pt-1">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Course Content Title</th>
+                                      <th>Status</th>
+                                      <th>Duration</th>
+                                      <th>Created Date</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Course Content Title Value</td>
+                                      <td>Status Value</td>
+                                      <td>Duration Value</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Course Content Title Value</td>
+                                      <td>Status Value</td>
+                                      <td>Duration Value</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Course Content Title Value</td>
+                                      <td>Status Value</td>
+                                      <td>Duration Value</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <!---->
+                            <hr>
+                            <span class="sectTitle_2nd_fnt">Badge to Earn</span>
+                            <hr>
+                            <!---->
+                            <div class="row mt-1">
+                              <div class="col-lg-12 px-3">
+                                <table class="omTableClr table b-t pt-1">
+                                  <thead>
+                                    <tr>
+                                      <th>Badge</th>
+                                      <th>Badge Title</th>
+                                      <th>Badge Tagging</th>
+                                      <th>Badge Description</th>
+                                      <th>Created Date</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><img src="../html/Assets/img/1st badge.png"/></td>
+                                      <td>Badge 1</td>
+                                      <td>Baddge Tagging 1</td>
+                                      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td><img src="../html/Assets/img/1st badge.png"/></td>
+                                      <td>Badge 1</td>
+                                      <td>Baddge Tagging 1</td>
+                                      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td><img src="../html/Assets/img/1st badge.png"/></td>
+                                      <td>Badge 1</td>
+                                      <td>Baddge Tagging 1</td>
+                                      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                      <td>Date Value</td>
+                                      <td><a href="#" class="mr-2"><i class="fa fa-edit"></i></a>
+                                          <a href="#"><i class="fa fa-trash DeleteColor"></i></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn_secondary pullRight">Add New</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Fourst Step-->
+                    <div class="row setup-content" id="step-12">
+                      <div class="col-lg-12 cstm_ctnr_Content py-2">  
+                        <div class="row pb-5 px-4">
+                          <div class="col-lg-12 pt-3">
+                            <div class="successContent">
+                              <span><i class="fa fa-check-circle"></i></span>
+                              <h3>You have successfully created a course!</h3>
+                              <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus feugiat justo, nec pulvinar nulla lacinia a. Cras eros eros, fermentum vel suscipit id, feugiat id justo.</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </form>
+                  <script>
+                    $(document).ready(function () {
+    var navListItems = $('div.setup-panel div a'),
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn'),
+        allPrevBtn = $('.prevBtn');
+
+    allWells.hide();
+
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+            $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-indigo').addClass('btn-default');
+            $item.addClass('btn-indigo');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+    });
+
+    allPrevBtn.click(function(){
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            prevStepSteps = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+            prevStepSteps.removeAttr('disabled').trigger('click');
+    });
+
+    allNextBtn.click(function(){
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+
+        $(".form-group").removeClass("has-error");
+        for(var i=0; i< curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+
+        if (isValid)
+            nextStepWizard.removeAttr('disabled').trigger('click');
+    });
+
+    $('div.setup-panel div a.btn-indigo').trigger('click');
+});
+
+const actualBtn = document.getElementById("actual-btn");
+
+const fileChosen = document.getElementById("file-chosen");
+
+actualBtn.addEventListener("change", function () {
+  fileChosen.textContent = this.files[0].name;
+});
+
+                  </script>
+                </div>
+                
+                
+
+                <div class="cstm_ctnr_bottom py-2 px-3">
+                  <button type="button" class="btn btn-sm btn_primary_otl pullLeft">Previous</button>
+                  <button type="button" class="btn btn-sm btn_primary pullRight">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

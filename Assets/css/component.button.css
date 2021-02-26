@@ -1,0 +1,184 @@
+/*Button Style*/
+.btn_primary{
+    background-color: #0173C5;
+    color: #ffffff;
+}
+
+.btn_primary:hover{
+    background-color: #00508A;
+    color:#ffffff;
+}
+
+.btn_primary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_secondary{
+    background-color: #017233;
+    color: #ffffff;
+}
+
+.btn_secondary:hover{
+    background-color: #025427;
+    color:#ffffff;
+}
+
+.btn_secondary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_primary_otl{
+    background-color: transparent;
+    background-image: none;
+    border-color: #0173C5;
+    color: #0173C5;
+}
+
+.btn_primary_otl:hover{
+    background-color: #0173C5;
+    color:#ffffff;
+}
+
+.btn_primary_otl:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_secondary_otl{
+    background-color: transparent;
+    background-image: none;
+    border-color: #017233;
+    color: #017233;
+}
+
+.btn_secondary_otl:hover{
+    background-color: #017233;
+    color:#ffffff;
+}
+
+.btn_secondary_otl:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_tertiary{
+    background-color: #67217A;
+    color: #ffffff;
+}
+
+.btn_tertiary:hover{
+    background-color: #531B63;
+    color:#ffffff;
+}
+
+.btn_tertiary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_tertiary_otl{
+    background-color: transparent;
+    background-image: none;
+    border-color: #531B63;
+    color: #531B63;
+}
+
+.btn_tertiary_otl:hover{
+    background-color: #531B63;
+    color:#ffffff;
+}
+
+.btn_tertiary_otl:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_dflt{
+    background-color: #707070;
+    color: #CFCFCF;
+}
+
+.btn_dflt:hover{
+    color:#CFCFCF;
+}
+
+.btn_dflt_otl:hover{
+    color:#707070;
+}
+
+.btn_dflt:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.btn_dflt_otl{
+    background-color: transparent;
+    background-image: none;
+    border-color: #707070;
+    color: #707070;
+}
+
+.btn_dflt_otl:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+/*End of Button Style*/
+
+/*Start of State Toggle BUttons*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #0171C6;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #0171C6;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*End of State toggle button*/

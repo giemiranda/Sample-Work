@@ -1,0 +1,18 @@
+.wbElementSect{
+	border: 1px solid #e5e5e5;
+}
+
+.elementGroupItem{
+	font-weight: 700;
+	color: #333333;
+}
+
+.elementGroupItem:hover{
+	text-decoration: none;
+	color: #333333;
+}
+
+.elementGroup .card{
+	border-bottom: 1px solid #e5e5e5 !important;
+    border-radius: 0px;
+}

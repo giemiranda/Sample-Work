@@ -1,0 +1,67 @@
+.lsSection, .tpDets, .syllabusSection{
+    border:1px solid #cccccc;
+    border-radius:3px;
+}
+
+.accordion #Module1 .glyphicon-folder-close{
+    padding-top: 8px;
+}
+
+#sortable{
+    padding-left: 0px !important;
+}
+
+#accordion #sortable .card-header{
+    background-color: #002050 !important;
+    height:45px;
+}
+
+.syllabusListLeft #accordion #sortable .card-header{
+    background-color: #ffffff !important;
+}
+
+.syllabusListLeft #sortable li{
+    border: none;
+    margin-bottom: 0 !important;
+}
+
+#accordion #sortable .card-header .accordionTitle{
+    color:#ffffff;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+#sortable li{
+    list-style: none;
+}
+
+.accordionTitle{
+    margin-top:12px;
+}
+
+.accordionLineNumber{
+    background-color: #008272;
+    border: 1px solid #008272;
+    padding-top: 10px;
+}
+
+.trainingProgramSteps .steps-form .steps-row:before{
+    width: 80%;
+}
+
+.syllabusListLeft ul{
+    margin-bottom: 0px;
+}
+
+.successContent{
+    text-align: center;
+}
+
+.successContent .fa-check-circle{
+    font-size: 5rem;
+    color:#007133;
+}
+
+.successContent h3{
+    color:#007133;
+}

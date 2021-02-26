@@ -1,0 +1,57 @@
+/*Accordion*/
+.group { zoom: 1 }
+#sortable li{
+    border:1px solid #d1d1d1;
+}
+
+#sortable .card-header{
+    border-bottom:0px;
+}
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+
+.accordion{
+    border: 1px solid #eaeaea ;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size:.9rem;
+}
+
+.accordionTitle{
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+    margin-top: 3px;
+    color:#212529;
+}
+
+.accordionExpandCont{
+    height: auto !important;
+}
+
+.accordionLineNumber{
+    height: 100%;
+    width:20px;
+    padding:5px;
+    background-color: #002050;
+    border:1px solid #002050;
+    color: #ffffff;
+}
+
+.card{
+    border: none !important;
+    cursor: pointer;
+}
+
+#accordion .card-header{
+    padding:0px;
+}
+
+.sortableSyllabus { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+.sortableSyllabus li{
+    border:1px solid #d1d1d1;
+    border-radius: 3px;
+}
+.sortableSyllabus .card-header{
+    border-bottom:0px;
+}
+/*End of Accordion*/

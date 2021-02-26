@@ -1,0 +1,223 @@
+.cstm_ctnr_fullWidth{
+	
+}
+
+.learner_interestOne{
+	background:linear-gradient(rgba(94, 94, 94, 0.5), rgba(94, 94, 94, 0.7)), url('../img/p1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.learner_interestTwo{
+	background:linear-gradient(rgba(94, 94, 94, 0.5), rgba(94, 94, 94, 0.7)), url('../img/p2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.searchCourse{
+	width: 60% !important;
+	padding: 10px 15px;
+	margin: 0 auto;
+}
+
+.searchCourse .input-group{
+	width: 50% !important;
+}
+
+.InterestCheckerLink{
+	font-size: .7rem;
+	display: block;
+	margin: 0 auto;
+}
+
+.topCourses{
+	width: 285px;
+	min-height: 375px;
+	max-height: 435px;
+	background-color: #ffffff;
+	border:solid #ededed 1px;
+	border-radius: 4px;
+}
+
+.topCoursesOne{
+	width: 285px;
+	min-height: 405px;
+	max-height: 435px;
+	background-color: #ffffff;
+	border:solid #ededed 1px;
+	border-radius: 4px;
+}
+
+.cardHeader{
+	width: 100%;
+	height: 140px;
+	background-color: #616161;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top:solid #ededed 1px;
+	margin-bottom: 5px;
+}
+
+.cardHdr_title{
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 0px !important;
+}
+
+.cardHdr_Parag{
+	font-size: .8rem;
+}
+
+.avatar {
+vertical-align: middle;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+background-color: #bfbfbf;
+}
+
+.instructorName{
+	margin-bottom: 0px !important;
+}
+
+.instructorPosition{
+	font-size: .9rem;
+	margin-bottom: 0px !important;
+}
+
+.roundedWrap{
+	font-size: .65rem !important;
+}
+
+
+/* Learner Interest 2 */
+.searchFilteredBox{
+	width: 50% !important;
+	padding: 20px 15px;
+	margin: 0 auto;
+	border:solid #ededed 1px;
+	border-radius: 4px;
+	background-color: #efefefd6;
+	text-align: center;
+}
+
+.instructsDets label{
+	font-size: .8rem !important;
+	margin-bottom: 0 !important;
+}
+
+.addtlDetails{
+	font-size: .8rem;
+	font-weight: 300;
+}
+
+/* Interest Checker */
+
+.interestItemCb{
+	border: solid 1px #00508A;
+    border-radius: 35px;
+    width: 150px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #00508A;
+	cursor: pointer !important;
+}
+
+.interestItemCb:checked + label {
+	background-color: #00508A;
+	color: #fff;
+  }
+
+  /* Results Learner - 1 */
+
+  .supportDescKw{
+	  font-size: .8rem;
+  }
+
+  .resultsFilterBox{
+	width: 100% !important;
+	padding: 10px 15px;
+	margin: 0 auto;
+	border:solid #ededed 1px;
+	border-radius: 4px;
+  }
+
+  .resultsFilterBox .btn_primary_otl{
+	padding:3px 15px !important;
+	font-size: .8rem;  
+  }
+
+
+  .courseTitle{
+	  font-size: 1rem;
+	  font-weight: 700;
+  }
+
+  .courseDesc{
+	  font-size: .8rem;
+  }
+
+  .resultList .resultRow{
+	  cursor: pointer;
+	  border-bottom: solid 1px #e6e6e6;
+  }
+
+  /* Results Learner - 2 */
+  .sideFilterSect{
+	  border: solid 1px #ededed;
+	  border-radius: 4px;
+	  padding: 10px 15px;
+	  height: 100%;
+  }
+
+  .sideFilterSect select{
+	  width:100%;
+  }
+
+  .sideFilterSect a{
+	  text-decoration: underline;
+	  font-size: .8rem;
+  }
+
+  .topCoursesResults{
+	width: 100%;
+	min-height: 435px;
+	max-height: 505px;
+	background-color: #ffffff;
+	border:solid #ededed 1px;
+	border-radius: 4px;
+}
+
+.topCoursesResults .cardHeader{
+	width: 100%;
+	height: 140px;
+	background-color: #616161;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top:solid #ededed 1px;
+	margin-bottom: 5px;
+}
+
+.topCoursesResults .cardHdr_title{
+	font-size: .9rem !important;
+	font-weight: 600;
+	margin-bottom: 0px !important;
+}
+
+.topCoursesResults .cardHdr_Parag{
+	font-size: .8rem;
+}
+
+.topCoursesResults .instructorName, .instructorPosition{
+	font-size: .8rem;
+	margin-bottom: 0px !important;
+}
+
+#lessonScheduleMod{
+	top: 65px !important;
+    padding-bottom: 70px;
+}

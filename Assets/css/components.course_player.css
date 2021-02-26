@@ -1,0 +1,241 @@
+.cstm_ctnr_CPlayer .mainActFrame{
+    width: 100%;
+    height: 500px;
+	background-color: #616161;
+	position: relative;
+}
+
+.cstm_ctnr_CPlayer .webcamFrame{
+    width: 100%;
+    height: 250px;
+    background-color: #616161;
+}
+
+.cstm_ctnr_CPlayer .whiteboardFrame{
+    width: 100%;
+    height: 250px;
+    background-color: #818181;
+}
+
+.moduleDetails{
+	height: auto !important;
+}
+
+.moduleDetails, .lessonDetails{
+	background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius:  3px !important;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+	box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+	height: 100%;
+}
+
+.avatar {
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #bfbfbf;
+}
+
+.instructorName{
+	margin-bottom: 0px !important;
+}
+
+.instructorPosition{
+	font-size: .9rem;
+	margin-bottom: 0px !important;
+}
+
+.roundedWrap{
+	font-size: .65rem !important;
+}
+
+.moduleDescription{
+	font-size: .8rem;
+}
+
+.cpTabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	color:#00508A !important;
+	border: 0;
+	border-bottom: solid 3px #00508A;
+	border-radius: 0px !important;
+	font-weight: 700;
+}
+
+.cpTabs .nav-tabs .nav-link{
+	color: #545454;
+	padding:10px 35px !important;
+	border-radius: 0 !important;
+	font-size: .9rem;
+}
+
+.cpTabs .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+	color:#00508A !important;
+	border: 0;
+	border-bottom: solid 3px #00508A;
+	border-radius: 0px !important;
+}
+
+.lessonIcon .fa{
+	font-size: 24px;
+}
+
+.lessonItemDetails{
+	display: grid;
+	line-height: 17px;
+}
+
+.lessonItemDetails p{
+	font-size: .8rem;
+}
+
+.noteSection .note-editor.note-frame, .note-editor.note-airframe{
+	border:1px solid #dee2e6 !important;
+}
+
+.uploadedImageContainer{
+    background-color: #efefef;
+    border-radius: 5px;
+    height: 230px;
+	width: 100%;
+}
+
+.uploadedImageContainer .fa-image{
+    font-size: 3rem;
+}
+
+#lessonFinished{
+	color: #017233;
+}
+
+#lessonActive{
+	color: #00508A;
+}
+
+#lessonNext{
+	color: #868686;
+}
+
+.otherParticipants{
+	width: 100%;
+	height: 100px;
+	background-color: #343434;
+	padding-top: 8px;
+	padding-left: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.participantBox{
+	height: 85px;
+	width: 125px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 0 5px;
+	position: relative;
+	display: inline-block;
+}
+
+.participantBox img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.participantBox .nameOverlay{
+	background-color: #262626;
+	color: #fff;
+	font-size: .75rem;
+	position: absolute;
+	top:60px;
+	max-width: 110px;
+  	white-space: nowrap;
+  	overflow: hidden;
+	text-overflow: ellipsis;
+	padding:2px
+}
+
+.controlSect{
+	width: 50%;
+	height: 60px;
+	border-radius: 10px;
+	background-color: #3c3c3c68;
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	z-index: 1000;
+  	-webkit-transform: translateX(-50%);
+  	transform: translateX(-50%)
+}
+
+.controlSect .row{
+	height: 100%;
+	padding-top: 9px;
+}
+
+.controlSect .fa{
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.controlSect span{
+	color: #fff;
+	font-size: .75rem;
+	text-align: center;
+}
+
+.microphone, .webcam, .chat, .wboard, .slideshow, .endSession{
+	text-align: center!important;
+}
+
+.changeableDiv1{
+	width: 100%;
+	height: 80%;
+	background-color: thistle;
+}
+
+.changeableDiv2{
+	width: 100%;
+	height: 80%;
+	background-color:turquoise;
+}
+
+.changeableDiv3{
+	width: 100%;
+	height: 80%;
+	background-color:rgb(204, 237, 133);
+}
+
+.chatBox{
+	background-color: rgb(255, 183, 183);
+    width: 300px;
+	height: 300px;
+	position: absolute;
+	top:100px;
+	right: 0;
+	display: none;
+	z-index: 1000;
+}
+
+.lessonListModal .modal{
+	top: 65px !important;
+    padding-bottom: 70px;
+}
+
+.lessonListModal .modal-header{
+	border-bottom: 0;
+}
+
+.tab-pane .nav-link{
+	color: #545454;
+	padding: 5px 10px;
+	padding-left: 0px !important;
+}
+
+.tab-pane .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color: #1861ac;
+    background-color: transparent;
+    border-bottom: 2px solid #1861ac;
+    border-radius: 0px;
+}

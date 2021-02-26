@@ -1,0 +1,161 @@
+.cstm_ctnr_profile_view{
+    margin-top: 7% !important;
+}
+
+.cstm_ctnr_profile_view .boxed_ctnr{
+	background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px !important;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+}
+
+.fa {
+  font-size: 12px;
+  height:22px;
+  width: 22px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  line-height: 22px;
+}
+
+.fa-facebook:hover {
+	background: #203258;
+	text-decoration: none;
+	color: #fff;
+}
+
+.fa-twitter:hover {
+	background: #2d526e;
+	text-decoration: none;
+	color: #fff;
+  }
+
+.fa-linkedin:hover {
+	background: #18457b;
+	text-decoration: none;
+	color: #fff;
+  }
+  
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+	background: #2463AF;
+	color: white;
+  }
+
+.learnerName .sectTitle_fnt{
+	font-weight: 700;
+}
+
+.learnerInformation label{
+	margin-bottom: 0px !important;
+}
+
+.learnerInformation p{
+	margin-bottom: 0px !important;
+}
+
+.fa-check-circle{
+	font-size: 5rem;
+}
+
+.profileStats p{
+	margin-bottom: 0px !important;
+}
+
+.profileStats .badgeNumber{
+	font-size: 1.5rem;
+}
+
+.profileStats .pointsNumber{
+	font-size: 1.5rem;
+}
+
+.userBadgesIcon, .userBadgesCertIcon {
+	height:35px;
+	width: 35px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	line-height: 22px;
+	background-color: red;
+	-webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.13);
+  }
+
+  .userBadgesIcon .fa{
+	  font-size: 1.35rem;
+	  line-height: 32px;
+	  color: #fff;
+  }
+
+  .userBadgesCertIcon .fa{
+	font-size: 1.15rem;
+	line-height: 32px;
+	color: #fff;
+}
+
+  .courseTitle{
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0px !important;
+}
+
+.courseDesc{
+	font-size: .8rem;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-ms-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-line-clamp: 3;
+	-moz-line-clamp: 3;
+	-ms-line-clamp: 3;
+	line-clamp: 3;
+	overflow: hidden;
+}
+
+.boxed_ctnr .resultRow{
+	cursor: pointer;
+	border-bottom: solid 1px #e6e6e6;
+}
+
+.activityIcon{
+	height:36px;
+	width: 36px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 7px;
+	line-height: 22px;
+	background-color: red;
+	line-height: 40px;
+}
+
+.activityIcon .fa{
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.activityDets{
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 15px;
+}
+
+.sectionFooter{
+	background-color: rgba(0, 0, 0, 0.035);
+	height: 50px;
+}

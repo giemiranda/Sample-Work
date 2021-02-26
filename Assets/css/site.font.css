@@ -1,0 +1,67 @@
+/*Start of CustomFont Style*/
+p{
+    color:#464646;
+}
+
+.txtUnderline{
+    text-decoration: underline;
+}
+
+.sectTitle_fnt{
+    font-size: 1.2rem;
+}
+
+.sectTitle_2nd_fnt{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lblTitle{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lblValue{
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.fw100{
+    font-weight: 100;
+}
+
+.fw300{
+    font-weight: 300;
+}
+
+.fw400{
+    font-weight: 400;
+}
+
+.fw500{
+    font-weight: 500;
+}
+
+.fw700{
+    font-weight: 700;
+}
+
+.fw900{
+    font-weight: 900;
+}
+
+.whiteText{
+    color: #fff;
+}
+/*End of Custom Font Styles*/
+
+@font-face {
+    font-family: "summernote";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('../font/summernote.eot');
+    src: url('../font/summernote.eot#iefix') format("embedded-opentype"), 
+         url('../font/summernote.woff2') format("woff2"), 
+         url('../font/summernote.woff') format("woff"), 
+        url('../font/summernote.ttf') format("truetype");}

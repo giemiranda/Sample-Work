@@ -1,0 +1,66 @@
+.roundedWrap{
+    width:5%;
+    height:15px;
+    background-color: #E8E8E8;
+    color:#616161;
+    border-radius:15px;
+    padding:5px 15px 5px 15px;
+    font-weight: 700;
+    font-size: .75rem;
+}
+
+.roundedWrapReverse{
+    width:5%;
+    height:15px;
+    background-color: #616161;
+    color:#E8E8E8;
+    border-radius:15px;
+    padding:5px 15px 5px 15px;
+    font-weight: 700;
+    font-size: .75rem;
+    color:#ffffff;
+}
+
+.roundedWrap_otl{
+    width:5%;
+    height:15px;
+    border:solid 1px #888888;
+    color:#616161;
+    border-radius:15px;
+    padding:5px 15px 5px 15px;
+    font-weight: 700;
+    font-size: .75rem;
+}
+
+.roundedIconSm{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 500px;
+    background-color: #00508A;
+    color: #ffffff;
+}
+.roundedIconMd{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 500px;
+    background-color: #00508A;
+    color: #ffffff;
+}
+
+.roundedIconLrg{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 500px;
+    background-color: #00508A;
+    color: #ffffff;
+}
+

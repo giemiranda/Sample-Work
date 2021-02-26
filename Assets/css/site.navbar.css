@@ -1,0 +1,145 @@
+/*Navbar*/
+.navbarMenu{
+    padding: 0.25rem 1rem !important;
+    background-color: #0072C6;
+    color:#fff;
+    top:67px;
+}
+
+.navbarMenu a{
+    color:#fff;
+    font-size: .85rem;
+}
+
+
+.navbarMenu .dropdown-menu a{
+    color:#4569C5;
+}
+
+.navbarBrand{
+    padding: 0.5rem 1rem;
+    /* background-color: #4569C5 !important; */
+	background-color: #fff !important;
+}
+
+.navbarBrand #userName{
+    /* color: #fff; */
+	color: #999 !important;
+}
+
+.txtbold{
+    font-weight: 700 !important;
+}
+
+.navUsername .dropdown-menu{
+    top: 50px !important;
+    left: auto !important;
+}
+
+.navAdmin .dropdown-menu {
+    top: 50px !important;
+    left: 90%;
+}
+/*End of Navbar*/
+
+/*Page Name Bar Style*/
+.page_name{
+    background-color: #ffffff;
+    height:65px;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1029;
+}
+
+.pt_lbl{
+    font-size: 12px;
+}
+/*End of Page Name Bar Style*/
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    line-height: 1;
+    border-radius: 500px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.avatar img {
+    border-radius: 500px;
+    width: 100%;
+}
+
+.avatar i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+    .avatar i.right {
+        left: auto;
+        right: 0;
+    }
+
+    .avatar i.bottom {
+        left: auto;
+        top: auto;
+        bottom: 0;
+        right: 0;
+    }
+
+    .avatar i.left {
+        top: auto;
+        bottom: 0;
+    }
+
+    .avatar i.on {
+        background-color: #6cc788;
+    }
+
+    .avatar i.off {
+        background-color: #f8f8f8;
+    }
+
+    .avatar i.away {
+        background-color: #f77a99;
+    }
+
+    .avatar i.busy {
+        background-color: #f44455;
+    }
+
+.avatar.w-32 i {
+    margin: 0px;
+}
+
+.avatar.w-48 i {
+    margin: 2px;
+}
+
+.avatar.w-56 i {
+    margin: 3px;
+}
+
+.avatar.w-64 i {
+    margin: 4px;
+}
+
+.avatar.w-96 i {
+    margin: 9px;
+}
+
+.avatar.w-128 i {
+    margin: 14px;
+}
+
+/**/

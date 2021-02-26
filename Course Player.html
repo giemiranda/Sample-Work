@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <title>OM-LMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Assets/css/site.css">
+	<link rel="stylesheet" href="Assets/css/site.font.css">
+	<link rel="stylesheet" href="Assets/css/site.navbar.css">
+  <link rel="stylesheet" href="Assets/css/component.css">
+  <link rel="stylesheet" href="Assets/css/component.accordion.css">
+  <link rel="stylesheet" href="Assets/css/component.button.css">
+  <link rel="stylesheet" href="Assets/css/component.breadcrumb.css">
+  <link rel="stylesheet" href="Assets/css/component.form_fields.css">
+  <link rel="stylesheet" href="Assets/css/component.tables.css">
+  <link rel="stylesheet" href="Assets/css/component.tiles.css">
+  <link rel="stylesheet" href="Assets/css/component.treeview.css">
+  <link rel="stylesheet" href="Assets/css/component.rounded_wrap.css">
+  <link rel="stylesheet" href="Assets/lib/fonts/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/lib/fonts/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="Assets/css/component.steps.css">
+  <link rel="stylesheet" href="Assets/css/components.course_player.css">
+  <link rel="stylesheet" href="Assets/css/summernote-bs4.css">
+  <link rel="stylesheet" href="Assets/css/jquery-comments.css">
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    
+  </head>
+
+<body class="bg-light">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Assets/js/floating_form_label.js"></script>
+<script type="text/javascript" src="Assets/js/summernote-bs4.js"></script>
+<script type="text/javascript" src="Assets/js/summernote-bs4.js.map"></script>
+<script type="text/javascript" src="Assets/js/jquery-comments.js"></script>
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+<script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+
+<header>
+  <!--Top NavBar-->
+   <nav class="navbar navbarBrand navbar-expand-lg navbar-light bg-light fixed-top" style="z-index: 1100;">
+       <a href="#"><img src="Assets/img/logo-omc-colored.png" style="width:55px;"></a>
+
+       <div class="collapse navbar-collapse justify-content-md-center mr-auto ml-auto" id="navbarSupportedContent">
+           <form class="form-inline my-2 my-lg-0" style="margin-left:100px">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search" style="width: 300px;border-radius:50px !important">
+           </form>
+       </div>
+
+       <div class="navUsername">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="avatar w-32"><img src="Assets/img/profile/x0.png" alt="..."><i class="off b - white bottom"></i></span>
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><span class="_500" id="userName">John Doe</span></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a href="/Account/UserProfile" class="dropdown-item"><span>Profile</span></a>
+               <a href="/Home/Privacy" class="dropdown-item"><span>DPA Policy</span></a>
+               <a href="/Home/Roles" class="dropdown-item"><span>Switch Role</span></a>
+               <a href="/Account/Logout" class="dropdown-item"><span>Sign out</span></a>
+           </div>
+       </div>
+       <div class="navAdmin">
+           <a href="/Home/Index" class="nav-link p-l" data-toggle="dropdown" aria-expanded="false">
+               <span class="hidden-md-down nav-text m-l-sm text-right" href=""><i class="material-icons">&#xe5d4;</i></span>
+           </a>
+           <div class="dropdown-menu pull-right dropdown-menu-scale">
+               <a class="dropdown-item" href>General Setup</a>
+               <a class="dropdown-item" href>Administration</a>
+               <a class="dropdown-item" href>Platform Tools</a>
+               <a class="dropdown-item" ui-sref="app.page.setting"><span>Settings</span> <span class="label primary m-l-xs">3/9</span></a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href>Update Version</a>
+           </div>
+       </div>
+
+
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+   </nav>
+
+   <nav class="navbar navbarMenu navbar-expand-md fixed-top">
+       <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="#">Menu 1 <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 2</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 3</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Menu 4</a>
+               </li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdown01">
+                       <a class="dropdown-item" href="#">Action</a>
+                       <a class="dropdown-item" href="#">Another action</a>
+                       <a class="dropdown-item" href="#">Something else here</a>
+                   </div>
+               </li>
+           </ul>
+           <form class="form-inline my-2 my-lg-0">
+               <label>API Version</label>
+           </form>
+       </div>
+   </nav>
+   <!--End of Top NavBar-->
+
+</header>
+
+    <!--Page Name Bar-->
+    <div class="page_name box-shadow py-2 px-3">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                <div class="page-title">
+                  <span class="roundedIconMd pullLeft mr-3">Icon</span>
+                  <h4 class="mb-0">Course Player</h4>
+                  <small class="text-muted">Your second step before on creating your own training.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Name Bar-->
+
+    <!--Main Container-->
+    <div class="container cstm_ctnr">
+        <div class="row">
+            <div class="col-lg-12 px-0">
+                
+                <div class="cstm_ctnr_CPlayer">
+                  <!-- Video, Webcam and Whiteboard -->
+                  <div class="row mb-1">
+                    <div class="col-lg-12 pr-0">
+                      <div class="mainActFrame">
+                        
+                        <div class="otherParticipants">
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                            <div class="participantBox">
+                              <div class="partiWebcam"></div>
+                              <div class="nameOverlay">
+                                <span>Juan Miguel de Legaspi</span>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <div class="controlSect">
+                          <div class="row">
+                            <div class="col-lg-2 microphone">
+                              <i class="fa fa-microphone"></i><br/>
+                              <span>Mic</span>
+                            </div>
+
+                            <div class="col-lg-2 webcam">
+                              <i class="fa fa-camera"></i><br/>
+                              <span>Webcam</span>
+                            </div>
+
+                            <div class="col-lg-2 chat" onclick="showChatBox()">
+                              <i class="fa fa-comments"></i><br/>
+                              <span>Chat</span>
+                            </div>
+
+                            <div class="col-lg-2 wboard" onclick="showWboard()">
+                              <i class="fa fa-paint-brush"></i><br/>
+                              <span>Whiteboard</span>
+                            </div>
+
+                            <div class="col-lg-2 slideshow" onclick="showPresentation()">
+                              <i class="fa fa-slideshare"></i><br/>
+                              <span>Presentation</span>
+                            </div>
+
+                            <div class="col-lg-2 endSession">
+                              <i class="fa fa-times-circle"></i><br/>
+                              <span>End</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="changeableDiv1" id="changeableDiv1">
+
+                        </div>
+
+                        <div class="changeableDiv2" id="wBoard" style="display: none;">
+
+                        </div>
+
+                        <div class="changeableDiv3" id="shareScreen" style="display: none;">
+
+                        </div>
+
+                        <div id="chatBox" class="chatBox">
+                          <small>Chat Box Div</small>
+                        </div>
+
+                        </div>
+
+                    </div>
+                  </div>
+                  <!-- End of Video, Webcam and Whiteboard -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 1% !important;">
+      <div class="cstm_ctnr_CPlayer">
+        <div class="row">
+
+          <div class="col-lg-3 px-0">
+            <div class="moduleDetails px-3 py-3">
+              <label class="sectTitle_fnt">Module Title Placeholder</label>
+
+              <div class="mt-2">
+                <div class="avatar pullLeft mr-2">
+                </div>
+                <label class="fw700 instructorName">Byron De Lima</label><br/>
+                <label class="instructorPosition">Senior Professor</label>
+              </div>
+
+              <div class="pullLeft mt-1 mb-3">
+                <span class="roundedWrap">2 Sessions</span>
+                <span class="roundedWrap">135 Minutes</span>
+                <span class="roundedWrap">Beginner</span>
+              </div>
+
+              <p class="moduleDescription">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+
+              <p class="moduleDescription">
+                Nullam sit amet augue justo. Pellentesque dapibus, enim id malesuada hendrerit, est nisi fringilla ligula, sit amet aliquam nibh lorem et ligula. Quisque sit amet neque eu risus ullamcorper lobortis. Cras efficitur vulputate metus, at mollis nulla lacinia sit amet. Donec tristique suscipit cursus. Suspendisse purus augue, tempus ac nibh sit amet,
+              </p>
+              <div>
+                <!-- Lesson Item -->
+                <span class="sectTitle_2nd_fnt">Next Lesson</span>
+                <span class="pull-right"><a href="#" data-toggle="modal" data-target="#lessonLists"><small> Lesson Lists</small></a></span>
+                <div class="lessonItem">
+                  <div class="lessonIcon pullLeft mr-3 mt-3 ">
+                    <i class="fa fa-play-circle" id="lessonActive"></i>
+                  </div>
+                  
+                  <div class="lessonItemDetails">
+                    <span id="lessonActive"> <small>Lesson 1</small></span>
+                    <span class="sectTitle_2nd_fnt" id="lessonActive">Lesson Title placeholder maximum of 2 lines</span>
+                  </div>
+                </div>
+                <!-- End of Lesson Item -->
+
+                <!-- Modal -->
+                <div class="lessonListModal">
+                <div class="modal fade" id="lessonLists" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Lessons</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body pt-0">
+                        <!-- Lesson Item -->
+                        <div class="lessonItem">
+                          <div class="lessonIcon pullLeft mr-3 mt-3 ">
+                            <i class="fa fa-check-circle" id="lessonFinished"></i>
+                          </div>
+                          
+                          <div class="lessonItemDetails">
+                            <span id="lessonFinished"> <small>Lesson 1</small></span>
+                            <span class="sectTitle_2nd_fnt" id="lessonFinished">Lesson Title placeholder maximum of 2 lines</span>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End of Lesson Item -->
+                        <!-- Lesson Item -->
+                        <div class="lessonItem">
+                          <div class="lessonIcon pullLeft mr-3 mt-3 ">
+                            <i class="fa fa-check-circle" id="lessonFinished"></i>
+                          </div>
+                          
+                          <div class="lessonItemDetails">
+                            <span id="lessonFinished"> <small>Lesson 1</small></span>
+                            <span class="sectTitle_2nd_fnt" id="lessonFinished">Lesson Title placeholder maximum of 2 lines</span>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End of Lesson Item -->
+
+                        <!-- Lesson Item -->
+                        <div class="lessonItem">
+                          <div class="lessonIcon pullLeft mr-3 mt-3 ">
+                            <i class="fa fa-play-circle" id="lessonActive"></i>
+                          </div>
+                          
+                          <div class="lessonItemDetails">
+                            <span id="lessonActive"> <small>Lesson 1</small></span>
+                            <span class="sectTitle_2nd_fnt" id="lessonActive">Lesson Title placeholder maximum of 2 lines</span>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End of Lesson Item -->
+
+                        <!-- Lesson Item -->
+                        <div class="lessonItem">
+                          <div class="lessonIcon pullLeft mr-3 mt-3 ">
+                            <i class="fa fa-play"></i>
+                          </div>
+                          
+                          <div class="lessonItemDetails">
+                            <span id="lessonNext"> <small>Lesson 1</small></span>
+                            <span class="sectTitle_2nd_fnt" id="lessonNext">Lesson Title placeholder maximum of 2 lines</span>
+                            <p id="lessonNext">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End of Lesson Item -->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-sm btn_primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <!-- End of Modal -->
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="lessonDetails px-3 py-3">
+              <!-- Tabs -->
+              <div class="cpTabs">
+                <ul id="tabs" class="nav nav-tabs">
+                  <li class="nav-item"><a href="" data-target="#lessonOverview" data-toggle="tab" class="nav-link small active">Lesson Overview</a></li>
+                  <li class="nav-item"><a href="" data-target="#notes" data-toggle="tab" class="nav-link small">Notes</a></li>
+                  <li class="nav-item"><a href="" data-target="#comments" data-toggle="tab" class="nav-link small">Comments</a></li>
+                  <li class="nav-item"><a href="" data-target="#resources" data-toggle="tab" class="nav-link small">Resources</a></li>
+                </ul>
+                <br>
+                <div id="tabsContent" class="tab-content">
+                    <div id="lessonOverview" class="tab-pane active fade show px-2">
+                      <div>
+                        <label class="sectTitle_fnt">Lesson Title Placeholder</label>
+                        <div class="pull-right"> 
+                          <span class="roundedWrap">85 Minutes</span>
+                        </div>
+                      </div>
+                    
+                      <p class="moduleDescription mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sagittis dui, at auctor lacus. Proin fringilla nulla nibh, ut faucibus leo rhoncus non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    
+                      <p class="moduleDescription">
+                        Nullam sit amet augue justo. Pellentesque dapibus, enim id malesuada hendrerit, est nisi fringilla ligula, sit amet aliquam nibh lorem et ligula. Quisque sit amet neque eu risus ullamcorper lobortis. Cras efficitur vulputate metus, at mollis nulla lacinia sit amet. Donec tristique suscipit cursus. Suspendisse purus augue, tempus ac nibh sit amet,
+                      </p>
+                    </div>
+
+                    <div id="notes" class="tab-pane fade">
+                      <div class="noteSection">
+                        <div id="summernote"></div>
+                      </div>
+                    </div>
+
+                    <div id="comments" class="tab-pane fade">
+                        <div>
+                          <div id="comments-container">
+
+                          </div>
+                        </div>
+                    </div>
+
+                    <div id="resources" class="tab-pane fade">
+                      <span class="sectTitle_2nd_fnt">Groupings</span>
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Resource 1</a>
+                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Resource 2</a>
+                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Resource 3</a>
+                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Resource 4</a>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                              <span class="sectTitle_2nd_fnt">Resource Files 1</span>
+                              <div class="row mt-4">
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                              <span class="sectTitle_2nd_fnt">Resource Files 2</span>
+                              <div class="row mt-4">
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                              <span class="sectTitle_2nd_fnt">Resource Files 3</span>
+                              <div class="row mt-4">
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                              <span class="sectTitle_2nd_fnt">Resource Files 4</span>
+                              <div class="row mt-4">
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="col-lg-4">
+                                  <div class="uploadedFile">
+                                    <div class="pullLeft leftPart">
+                                      <span class="glyphicon glyphicon-file"></span>
+                                    </div>
+                                    <div class="pullRight rightPart pt-1">
+                                      <p class="filename mb-0">Filename.extension</p>
+                                      <p class="uploadedDate mb-0"><small>January 1, 2021</small></p>
+                                      <a href="#" class="txtUnderline"><small>Delete</small></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('#comments-container').comments({
+        profilePictureURL: 'https://viima-app.s3.amazonaws.com/media/public/defaults/user-icon.png',
+        getComments: function(success, error) {
+          var commentsArray = [{
+            id: 1,
+            created: '2015-10-01',
+            content: 'Lorem ipsum dolort sit amet',
+            fullname: 'Simon Powell',
+            upvote_count: 2,
+            user_has_upvoted: false
+          }];
+          success(commentsArray);
+        }
+      });
+
+      $('#summernote').summernote({
+        placeholder: 'Type your notes',
+        tabsize: 2,
+        height: 200
+      });
+
+      function showChatBox() {
+        var x = document.getElementById("chatBox");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function showWboard() {
+        var x = document.getElementById("wBoard");
+        if (x.style.display === "none") {
+          x.style.display = "block",
+          x.style.position = "absolute",
+          x.style.top = "100px",
+          x.style.zIndex = "2";
+
+
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function showPresentation() {
+        var x = document.getElementById("shareScreen");
+        if (x.style.display === "none") {
+          x.style.display = "block",
+          x.style.position = "absolute",
+          x.style.top = "100px",
+          x.style.zIndex = "2";
+
+
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+    </script>
+</body>
+</html>

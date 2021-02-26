@@ -1,0 +1,127 @@
+.tilesBordered{
+    width: 150px;
+    height:70px;
+    border-radius: 3px;
+    padding: 5px 10px 5px 10px;
+    border:1px solid #00508A;
+}
+
+.tilesBordered p{
+    color:#00508A !important;
+}
+
+.tilesBordered .leftPart{
+    width: 70%;
+}
+
+.tilesBordered .rightPart{
+    width: 30%;
+}
+
+.tilesBordered .leftPart p{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 19px;
+    position: relative;
+    top: .6rem;
+}
+
+.tilesBordered .upTitle{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: auto;
+    text-align: right;
+}
+
+.tilesBordered .downTitle{
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.tilesColored{
+    width: 150px;
+    height:70px;
+    border-radius: 3px;
+    padding: 5px 10px 5px 10px;
+    border:1px solid #00508A;
+    background-color: #00508A;
+    color:#ffffff;
+}
+
+.tilesColored .leftPart{
+    width: 50%;
+}
+
+.tilesColored .rightPart{
+    width: 50%;
+}
+
+.tilesColored .leftPart p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: auto;
+}
+
+.tilesColored .upTitle{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: auto;
+    text-align: right;
+}
+
+.tilesColored .downTitle{
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+/**/
+.uploadedFile{
+    width: 220px;
+    height: 55px;
+    line-height: 15px;
+}
+
+.uploadedFile .glyphicon-file{
+    font-size: 2.1rem;
+}
+
+.uploadedFile .filename{
+    color: #00508A;
+    font-weight: 700;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .9rem;
+}
+
+.uploadedFile .uploadedDate{
+    font-weight: 700;
+}
+
+.uploadBox form{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #969695;
+  }
+  .uploadBox form p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .uploadBox form input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+  }
+  
+/**/
